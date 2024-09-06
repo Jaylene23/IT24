@@ -1,6 +1,6 @@
 // Data Types
 let number = 10;
-let string = "hello";
+let greeetings = "hello";
 let boolean = true;
 
 // Arithmetic and Logical Operators
