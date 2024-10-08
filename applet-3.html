@@ -57,19 +57,38 @@
         </nav>
     </div>
 
-    <body>
-        <div class="applet-3">
-            <h1>Event Button Logger </h1>
-            <h3 id="logCount">Total Logs: </h3>
-            <br>
-            <button class="btn btn-primary" id="logButton">Click Me</button>
-            <button class="btn btn-secondary" id="clearButton">Clear</button>
-            <h2>Collected Data: </h2>
-            <div id="idContainer" style="width: 10rem;"></div>
+    <div class="applet-3">
+        <h1>Event Button Logger </h1>
+        <h3 id="logCount">Total Logs: 0</h3>
+        <br>
+        <button class="btn btn-primary" id="logButton">Click Me</button>
+        <button class="btn btn-secondary" id="clearButton">Clear</button>
+        <h2>Collected Data: </h2>
+        <div id="idContainer" style="width: 10rem;"></div>
+    </div>
 
+    <script>
+        let logCount = 0;
+        const logButton = document.getElementById('logButton');
+        const clearButton = document.getElementById('clearButton');
+        const logCountDisplay = document.getElementById('logCount');
+        const idContainer = document.getElementById('idContainer');
 
-        </div>
-    </body>
-    <script src="./applet-3.js"></script>
+        logButton.addEventListener('click', () => {
+            logCount++;
+            logCountDisplay.textContent = `Total Logs: ${logCount}`;
+            const date = new Date();
+            const logEntry = document.createElement('div');
+            logEntry.textContent = `Log ${logCount}: ${date.toLocaleString()}`;
+            idContainer.appendChild(logEntry);
+        });
 
+        clearButton.addEventListener('click', () => {
+            logCount = 0;
+            logCountDisplay.textContent = `Total Logs: ${logCount}`;
+            idContainer.innerHTML = '';
+        });
+    </script>
+
+</body>
 </html>
