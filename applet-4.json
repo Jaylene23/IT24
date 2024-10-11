@@ -1,0 +1,25 @@
+[
+    {
+        "student_id": 1,
+        "student_name": "Jay Lene Mangotara",
+        "student_program": "BS-Information Technology"
+    },
+
+    {
+        "student_id": 2,
+        "student_name": "Glaze Tinga",
+        "student_program": "BS-Financial Management"
+    },
+
+    {
+        "student_id": 3,
+        "student_name": "Glen Rey Tunayan",
+        "student_program": "BS-Computer Engineering"
+    },
+
+    {
+        "student_id": 4,
+        "student_name": "Jannah Mace Lorejo",
+        "student_program": "BS-Computer Science"
+    }
+]
